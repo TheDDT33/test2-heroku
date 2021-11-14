@@ -3,3 +3,4 @@ gunicorn
 python-binance
 songline
 TA-Lib
+numpy
