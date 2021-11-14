@@ -36,12 +36,12 @@ def SIGNALS_BY_SYMBOL(symbols):
         if (ema12[idx-1] < ema26[idx-1] and (i > j)) :
             print("BULLISH HERE")
             crossover.append(i) 
-            messenger.sendtext('▲▲▲ BUY NOW ▲▲▲')
+            messenger.sendtext(f'▲▲▲ BUY {symbols}NOW ▲▲▲')
 
         elif (ema12[idx-1] > ema26[idx-1] and (i < j)) :
             print("BEARISH HERE")
             crossunder.append(i)
-            messenger.sendtext('▼▼▼ SELL NOW ▼▼▼')
+            messenger.sendtext(f'▼▼▼ SELL {symbols} NOW ▼▼▼')
 
         else:
             crossover.append(None)
