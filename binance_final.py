@@ -51,7 +51,7 @@ def SIGNALS_BY_SYMBOL(symbols):
     crossover = np.array(crossover)
     crossunder = np.array(crossunder)
 
-@app.route('/webhook')
+@app.route('/webhook', methods=['POST'])
 def job():
 
     while True :
