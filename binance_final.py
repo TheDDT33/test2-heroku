@@ -36,7 +36,7 @@ def SIGNALS_BY_SYMBOL(symbols):
         if (ema12[idx-1] < ema26[idx-1] and (i > j)) :
             print("BULLISH HERE")
             crossover.append(i) 
-            messenger.sendtext(f'▲▲▲ BUY {symbols}NOW ▲▲▲')
+            messenger.sendtext(f'▲▲▲ BUY {symbols} NOW ▲▲▲')
 
         elif (ema12[idx-1] > ema26[idx-1] and (i < j)) :
             print("BEARISH HERE")
@@ -51,7 +51,7 @@ def SIGNALS_BY_SYMBOL(symbols):
     crossover = np.array(crossover)
     crossunder = np.array(crossunder)
 
-@app.route('/')
+@app.route('/webhook')
 def job():
 
     while True :
